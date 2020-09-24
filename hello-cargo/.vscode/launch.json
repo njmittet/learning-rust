@@ -4,7 +4,7 @@
         {
             "type": "lldb",
             "request": "launch",
-            "name": "Debug executable'",
+            "name": "Debug executable",
             "cargo": {
                 "args": [
                     "build",
@@ -12,6 +12,7 @@
                     "--package=hello-cargo"
                 ],
                 "filter": {
+                    "name": "hello-cargo",
                     "kind": "bin"
                 }
             },
@@ -21,7 +22,7 @@
         {
             "type": "lldb",
             "request": "launch",
-            "name": "Debug unit tests'",
+            "name": "Debug unit tests",
             "cargo": {
                 "args": [
                     "test",
@@ -30,6 +31,7 @@
                     "--package=hello-cargo"
                 ],
                 "filter": {
+                    "name": "hello-cargo",
                     "kind": "bin"
                 }
             },
