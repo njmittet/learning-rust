@@ -2,7 +2,7 @@
 
 A set of examples used to learn [Rust](https://www.rust-lang.org/). 
 
-## Resouces
+## Resources
 
 * [Fear not the Rust Borrow Checker](https://squidarth.com/rc/rust/2018/05/31/rust-borrowing-and-ownership.html)
 * [Safe Concurrency with Rust](https://squidarth.com/rc/rust/2018/06/04/rust-concurrency.html)
