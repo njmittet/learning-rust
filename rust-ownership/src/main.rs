@@ -1,15 +1,21 @@
 fn main() {
-    copy_in_function();
-    copy_with_function()
+    copy_vec();
+    using_lifetime()
 }
 
-fn copy_in_function() {
-    let vec1: Vec<String> = vec![String::from("First"), String::from("Second")];
+fn copy_vec() {
+    let vec1: Vec<String> = vec![
+        String::from("First"),
+        String::from("Second"),
+        String::from("Third"),
+        String::from("Fourth"),
+    ];
+
     let mut vec2: Vec<String> = Vec::new();
     vec2.push(vec1.get(1).unwrap().clone());
 }
 
-fn copy_with_function() {
+fn using_lifetime() {
     let vec1: Vec<String> = vec![String::from("First"), String::from("Second")];
     let mut vec2: Vec<String> = Vec::new();
     let vec3 = copy_to_new_vec(&vec1, &mut vec2);
