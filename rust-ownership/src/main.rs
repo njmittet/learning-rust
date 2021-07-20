@@ -21,7 +21,7 @@ fn using_lifetime() {
     vec3.get(0);
 }
 
-// Functions that return a reference to an object must use a lifetime paramter in order
+// Functions that return a reference to an object must use a lifetime parameter in order
 // to tell the the compiler exactly which object is referenced. If the object that is
 // being referenced goes out of scope while the reference is still in scope, the
 // compiler will complain. Lifetime parameters are normally inferred by the compiler,
