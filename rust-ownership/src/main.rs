@@ -4,15 +4,14 @@ fn main() {
 }
 
 fn copy_vec() {
-    let vec1: Vec<String> = vec![
+    let vec1 = vec![
         String::from("First"),
         String::from("Second"),
         String::from("Third"),
         String::from("Fourth"),
     ];
 
-    let mut vec2: Vec<String> = Vec::new();
-    vec2.push(vec1.get(1).unwrap().clone());
+    let _vec2 = vec![vec1.get(1).unwrap().clone()];
 }
 
 fn using_lifetime() {
@@ -30,5 +29,5 @@ fn using_lifetime() {
 // potentially be referencing, the lifetime parameters must be explicitly provided.
 fn copy_to_new_vec<'a>(vec1: &Vec<String>, vec2: &'a mut Vec<String>) -> &'a mut Vec<String> {
     vec2.push(vec1.get(1).unwrap().to_string());
-    return vec2;
+    vec2
 }
